@@ -1,5 +1,34 @@
 <template>
-  <Flipbook class="flipbook" :pages="pages" />
+  <p class="credit">
+    Листайте книжку используя кнопки или переворачивая страницы вручную!
+  </p>
+  <Flipbook class="flipbook" :pages="pages" v-slot="flipbook" ref="flipbook">
+    <div class="action-bar">
+      <div
+        class="btn left"
+        :class="{ disabled: !flipbook.canFlipLeft }"
+        @click="flipbook.flipLeft"
+      ></div>
+      <div
+        class="btn plus"
+        :class="{ disabled: !flipbook.canZoomIn }"
+        @click="flipbook.zoomIn"
+      ></div>
+      <span class="page-num">
+        Страница {{ flipbook.page }} из {{ flipbook.numPages }}
+      </span>
+      <div
+        class="btn minus"
+        :class="{ disabled: !flipbook.canZoomOut }"
+        @click="flipbook.zoomOut"
+      ></div>
+      <div
+        class="btn right"
+        :class="{ disabled: !flipbook.canFlipRight }"
+        @click="flipbook.flipRight"
+      ></div>
+    </div>
+  </Flipbook>
 </template>
 
 <script setup>
@@ -25,37 +54,54 @@ body {
   margin: 30px auto;
   width: 80vw;
   height: 80vh;
-  .flipbook-container {
-    .right::after {
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-100%);
-      content: ">";
-      font-size: 40px;
-      line-height: 50px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: black;
-      z-index: 1;
-    }
-    .left::after {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-100%);
-      content: "<";
-      font-size: 40px;
-      line-height: 50px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: black;
-      z-index: 1;
-    }
+  .btn {
+    width: 20px;
+    height: 20px;
+    background: aqua;
+    border-radius: 50%;
+  }
+  .action-bar {
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .action-bar .btn {
+    font-size: 30px;
+    color: #999;
+  }
+  .action-bar .btn:not(:first-child) {
+    margin-left: 10px;
+  }
+  .btn:hover {
+    color: #ccc;
+    filter: drop-shadow(1px 1px 5px #000);
+    cursor: pointer;
+  }
+  .action-bar .btn:active {
+    filter: none !important;
+  }
+
+  .action-bar .btn.disabled {
+    color: #666;
+    pointer-events: none;
+  }
+
+  .action-bar .page-num {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+
+  .flipbook .viewport {
+    width: 90vw !important;
+    height: calc(100vh - 50px - 40px) !important;
+  }
+
+  .flipbook .bounding-box {
+    box-shadow: 0 0 20px #000;
   }
 }
 </style>
