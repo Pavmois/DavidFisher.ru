@@ -9,19 +9,9 @@
         :class="{ disabled: !flipbook.canFlipLeft }"
         @click="flipbook.flipLeft"
       ></div>
-      <div
-        class="btn plus"
-        :class="{ disabled: !flipbook.canZoomIn }"
-        @click="flipbook.zoomIn"
-      ></div>
       <span class="page-num">
         Страница {{ flipbook.page }} из {{ flipbook.numPages }}
       </span>
-      <div
-        class="btn minus"
-        :class="{ disabled: !flipbook.canZoomOut }"
-        @click="flipbook.zoomOut"
-      ></div>
       <div
         class="btn right"
         :class="{ disabled: !flipbook.canFlipRight }"
@@ -51,6 +41,8 @@ body {
   padding: 0;
 }
 .flipbook {
+  position: relative;
+  z-index: 1;
   margin: 30px auto;
   width: 80vw;
   height: 80vh;
