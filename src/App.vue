@@ -1,11 +1,8 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Главная</router-link> |
-    <router-link to="/about">Книга памяти</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+    <router-link to="/about">Книга памяти</router-link>
+  </nav> -->
   <router-view />
 
   <div class="bubble bubble--1"></div>
@@ -40,10 +37,10 @@ body {
   padding: 0;
 }
 body {
-  // background: linear-gradient(-45deg, #530808, #220414, #46101086, #000000);
-  // background-size: 400% 400%;
-  // animation: gradient 20s ease infinite;
-  background: darkslategray;
+  background: linear-gradient(-45deg, #fd0000, #240808, #46101086, #000000);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+  // background: darkslategray;
 }
 
 .ocean {
@@ -62,6 +59,8 @@ body {
   background-color: white;
   bottom: -30px;
   opacity: 0.2;
+  //background: url("@/assets/logo.svg");
+  background-size: cover;
   animation: bubble 15s ease-in-out infinite,
     sideWays 4s ease-in-out infinite alternate;
 }
