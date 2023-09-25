@@ -1,8 +1,4 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Главная</router-link> |
-    <router-link to="/about">Книга памяти</router-link>
-  </nav> -->
   <router-view />
 
   <div class="bubble bubble--1"></div>
@@ -29,7 +25,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #7bff00;
 }
 html,
 body {
@@ -37,17 +32,13 @@ body {
   padding: 0;
 }
 body {
-  background: linear-gradient(-45deg, #fd0000, #240808, #46101086, #000000);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
-  // background: darkslategray;
-}
-
-.ocean {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(0deg, #182848, #2980b9);
+  // background-image: url("./assets/back.png");
+  // filter: brightness(1.75);
+  // backdrop-filter: brightness(125%);
+  // background-size: 100% 100%;
+  background: linear-gradient(-45deg, #660b0b, #240808, #5c4646, #000000);
+  background-size: 120% 120%;
+  animation: gradient 15s ease infinite;
 }
 
 .bubble {
@@ -59,7 +50,6 @@ body {
   background-color: white;
   bottom: -30px;
   opacity: 0.2;
-  //background: url("@/assets/logo.svg");
   background-size: cover;
   animation: bubble 15s ease-in-out infinite,
     sideWays 4s ease-in-out infinite alternate;
@@ -166,18 +156,6 @@ body {
   opacity: 0.3;
 }
 
-nav {
-  padding: 15px;
-
-  a {
-    font-weight: bold;
-    color: #2ceebd;
-
-    &.router-link-exact-active {
-      color: #e00b0b;
-    }
-  }
-}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
