@@ -1,6 +1,8 @@
 <template>
   <router-view />
-
+  <video autoplay muted loop id="myVideo">
+    <source src="@/assets/background-big.mp4" type="video/mp4" />
+  </video>
   <div class="bubble bubble--1"></div>
   <div class="bubble bubble--2"></div>
   <div class="bubble bubble--3"></div>
@@ -37,8 +39,17 @@ body {
   // backdrop-filter: brightness(125%);
   // background-size: 100% 100%;
   background: linear-gradient(-45deg, #660b0b, #240808, #5c4646, #000000);
-  background-size: 120% 120%;
-  animation: gradient 15s ease infinite;
+  // background-size: 120% 120%;
+  //animation: gradient 15s ease infinite;
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
 }
 
 .bubble {

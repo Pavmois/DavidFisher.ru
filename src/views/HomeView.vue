@@ -112,7 +112,7 @@ export default defineComponent({
     margin-top: 150px;
     font-size: 48px;
     font-weight: 700;
-    background-image: linear-gradient(180deg, #531111, #e23939, #eeeeee, #000);
+    background-image: linear-gradient(180deg, #000000, #fc0000, #000000, #000);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
