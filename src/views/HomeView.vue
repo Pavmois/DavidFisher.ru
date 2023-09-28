@@ -22,6 +22,12 @@
       </button>
       <button>
         <router-link to="/book"
+          ><span class="left-fishka"></span> События
+          <span class="right-fishka"></span
+        ></router-link>
+      </button>
+      <button>
+        <router-link to="/book"
           ><span class="left-fishka"></span> Реклама
           <span class="right-fishka"></span
         ></router-link>

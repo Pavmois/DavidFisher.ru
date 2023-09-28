@@ -41,6 +41,8 @@ body {
   background: linear-gradient(-45deg, #660b0b, #240808, #5c4646, #000000);
   // background-size: 120% 120%;
   //animation: gradient 15s ease infinite;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   video {
     position: absolute;
     left: 0;
@@ -50,6 +52,9 @@ body {
     min-height: 100%;
     z-index: -1;
   }
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .bubble {
