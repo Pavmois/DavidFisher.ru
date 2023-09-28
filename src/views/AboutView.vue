@@ -1,6 +1,8 @@
 <template>
   <div class="about">
-    <AccordeonList />
+    <div class="about-list">
+      <AccordeonList />
+    </div>
   </div>
 </template>
 
@@ -12,5 +14,12 @@ import AccordeonList from "@/components/AccordeonList.vue";
 .about {
   border: 1px solid red;
   height: 100vh;
+  .about-list {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    margin-top: 150px;
+  }
 }
 </style>

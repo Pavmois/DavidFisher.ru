@@ -1,5 +1,9 @@
 <template>
-  <div v-for="(question, index) in questions" :key="question.title">
+  <div
+    class="question"
+    v-for="(question, index) in questions"
+    :key="question.title"
+  >
     <button @click="() => handleAccordion(index)">
       {{ question.title }}
     </button>
@@ -19,7 +23,7 @@ const questions = reactive([
   {
     title: "Кто я?",
     answer: "Давид",
-    isExpanded: false, // Initial value
+    isExpanded: true, // Initial value
   },
   {
     title: "Сколько я занимаюсь стримами?",
@@ -42,7 +46,21 @@ function handleAccordion(selectedIndex) {
 </script>
 
 <style lang="scss" scoped>
+.question {
+  margin-bottom: 1rem;
+}
+button {
+  font-size: 1.5rem;
+  width: 90%;
+}
 .collapse {
+  margin: auto;
+  text-align: left;
+  width: 90%;
   transition: height 200ms cubic-bezier(0.3, 0, 0.6, 1);
+  p {
+    background: aqua;
+    font-size: 1.25rem;
+  }
 }
 </style>
