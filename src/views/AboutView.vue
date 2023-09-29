@@ -1,34 +1,32 @@
 <template>
   <div class="about">
-    <div class="about-header">
-      Всем привет!<br />
-      На данном сайте можно максимально подробно ознакомиться с моим
-      творчеством,<br />
-      найти множество интересных подробностей, связанных с костюмами, образами и
-      прочим.
+    <div class="about-list">
+      <AccordeonList />
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-};
+<script setup>
+import AccordeonList from "@/components/AccordeonList.vue";
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about {
-  position: relative;
   margin: auto;
-  margin-top: 50px;
-  width: 90%;
-  height: 100vh;
-  border: 1px solid #fff;
-  .about-header {
-    margin: auto;
-    text-align: left;
-    font-size: 28px;
-    color: #fff;
+  width: 40%;
+  height: 90vh;
+  .about-list {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    margin-top: 150px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 550px) {
+    width: 90%;
   }
 }
 </style>
