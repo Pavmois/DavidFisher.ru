@@ -12,14 +12,21 @@ import AccordeonList from "@/components/AccordeonList.vue";
 
 <style lang="scss" scoped>
 .about {
-  border: 1px solid red;
-  height: 100vh;
+  margin: auto;
+  width: 40%;
+  height: 90vh;
   .about-list {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-around;
     margin-top: 150px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 550px) {
+    width: 90%;
   }
 }
 </style>
