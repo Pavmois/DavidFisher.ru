@@ -130,6 +130,9 @@ export default defineComponent({
         opacity: 0.75;
       }
     }
+    &-title {
+      margin-top: 30px;
+    }
   }
 }
 .home::-webkit-scrollbar {
