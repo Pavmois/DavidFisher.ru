@@ -1,7 +1,10 @@
 <template>
   <router-view />
-  <video autoplay muted loop id="myVideo">
-    <source src="@/assets/background-big.mp4" type="video/mp4" />
+  <video v-if="isDesktop" autoplay muted loop id="myVideo">
+    <source src="@/assets/desktop.mp4" type="video/mp4" />
+  </video>
+  <video v-else autoplay muted loop id="myVideo">
+    <source src="@/assets/mobile.mp4" type="video/mp4" />
   </video>
   <div class="bubble bubble--1"></div>
   <div class="bubble bubble--2"></div>
@@ -16,6 +19,22 @@
   <div class="bubble bubble--11"></div>
   <div class="bubble bubble--12"></div>
 </template>
+
+<script lang="ts" setup>
+import { onMounted, ref } from "vue";
+
+let isDesktop = ref(false);
+
+onMounted(() => {
+  const handleResize = () => {
+    isDesktop.value = window.innerWidth >= 600;
+  };
+
+  handleResize(); // Set initial value
+
+  window.addEventListener("resize", handleResize);
+});
+</script>
 
 <style lang="scss">
 @import "@/styles/variables.scss";
@@ -34,13 +53,7 @@ body {
   padding: 0;
 }
 body {
-  // background-image: url("./assets/back.png");
-  // filter: brightness(1.75);
-  // backdrop-filter: brightness(125%);
-  // background-size: 100% 100%;
   background: linear-gradient(-45deg, #660b0b, #240808, #5c4646, #000000);
-  // background-size: 120% 120%;
-  //animation: gradient 15s ease infinite;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   video {
@@ -51,6 +64,12 @@ body {
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
+    @media screen and (max-width: 600px) {
+      top: -30%;
+    }
+    @media screen and (max-width: 500px) {
+      top: -15%;
+    }
   }
 }
 body::-webkit-scrollbar {

@@ -124,6 +124,13 @@ export default defineComponent({
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
+  @media screen and (max-width: 600px) {
+    .router-list {
+      button {
+        opacity: 0.75;
+      }
+    }
+  }
 }
 .home::-webkit-scrollbar {
   display: none;
