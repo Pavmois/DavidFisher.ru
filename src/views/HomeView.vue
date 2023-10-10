@@ -131,7 +131,13 @@ export default defineComponent({
       }
     }
     &-title {
+      font-size: 40px;
       margin-top: 30px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    &-title {
+      font-size: 34px;
     }
   }
 }

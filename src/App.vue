@@ -3,7 +3,7 @@
   <video v-if="isDesktop" autoplay muted loop id="myVideo">
     <source src="@/assets/desktop.mp4" type="video/mp4" />
   </video>
-  <video v-else autoplay muted loop id="myVideo">
+  <video v-else autoplay muted playsinline loop preload="metadata" id="myVideo">
     <source src="@/assets/mobile.mp4" type="video/mp4" />
   </video>
   <div class="bubble bubble--1"></div>
