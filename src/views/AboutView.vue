@@ -3,11 +3,13 @@
     <div class="about-list">
       <AccordeonList />
     </div>
+    <Back />
   </div>
 </template>
 
 <script setup>
 import AccordeonList from "@/components/AccordeonList.vue";
+import Back from "@/components/BackButton.vue";
 </script>
 
 <style lang="scss" scoped>

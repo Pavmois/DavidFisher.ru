@@ -33,7 +33,7 @@
         ></router-link>
       </button>
       <button>
-        <router-link to="/book"
+        <router-link to="/contacts"
           ><span class="left-fishka"></span> Контакты
           <span class="right-fishka"></span
         ></router-link>
@@ -78,6 +78,7 @@ export default defineComponent({
       transition: all 0.25s ease;
       border-radius: 20px;
       background: black;
+      opacity: 0.75;
       a {
         position: relative;
         margin: auto;
@@ -107,6 +108,7 @@ export default defineComponent({
       }
       &:hover {
         cursor: pointer;
+        opacity: 1;
         transform: scale(1.25);
         span {
           opacity: 1;
@@ -118,11 +120,23 @@ export default defineComponent({
     margin-top: 150px;
     font-size: 48px;
     font-weight: 700;
-    background-image: linear-gradient(180deg, #000000, #fc0000, #000000, #000);
+    // background-image: linear-gradient(180deg, #cccccc, #fc0000, #000000, #000);
+    background-image: url("@/assets/fishka.png");
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+  }
+  @media screen and (max-width: 600px) {
+    &-title {
+      font-size: 40px;
+      margin-top: 30px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    &-title {
+      font-size: 34px;
+    }
   }
 }
 .home::-webkit-scrollbar {
