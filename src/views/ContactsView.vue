@@ -25,7 +25,7 @@ export default defineComponent({
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   &-title {
-    margin-top: 150px;
+    margin-top: 50px;
     font-size: 48px;
     font-weight: 700;
     // background-image: linear-gradient(180deg, #cccccc, #fc0000, #000000, #000);

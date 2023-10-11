@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="home-title">DAVIDFISHER.RU</div>
+    <MainTitle />
     <div class="router-list">
       <button>
         <router-link to="/about"
@@ -42,12 +42,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "HomeView",
-});
+<script lang="ts" setup>
+import MainTitle from "@/components/MainTitle.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -117,7 +113,7 @@ export default defineComponent({
     }
   }
   &-title {
-    margin-top: 150px;
+    margin-top: 50px;
     font-size: 48px;
     font-weight: 700;
     // background-image: linear-gradient(180deg, #cccccc, #fc0000, #000000, #000);

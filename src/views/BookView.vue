@@ -1,6 +1,9 @@
 <template>
+  <MainTitle />
   <p class="desc">
-    Листайте книжку используя кнопки или переворачивая страницы вручную!
+    Листайте книжку используя кнопки
+    <br />
+    или переворачивая страницы вручную!
   </p>
   <Flipbook class="flipbook" :pages="pages" v-slot="flipbook" ref="flipbook">
     <div class="action-bar">
@@ -18,11 +21,14 @@
         @click="flipbook.flipRight"
       ></div>
     </div>
+    <Back />
   </Flipbook>
 </template>
 
 <script setup>
 import Flipbook from "flipbook-vue";
+import MainTitle from "@/components/MainTitle.vue";
+import Back from "@/components/BackButton.vue";
 import img1 from "@/assets/book/1.jpg";
 import img2 from "@/assets/book/2.jpg";
 import img3 from "@/assets/book/3.jpg";
@@ -60,7 +66,6 @@ const pages = [
   position: relative;
   z-index: 1;
   margin: 0px auto;
-  margin-bottom: 100px;
   display: flex;
   flex-direction: column-reverse;
   .btn {

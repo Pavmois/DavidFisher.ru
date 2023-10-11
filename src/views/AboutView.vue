@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <MainTitle />
     <div class="about-list">
       <AccordeonList />
     </div>
@@ -10,6 +11,7 @@
 <script setup>
 import AccordeonList from "@/components/AccordeonList.vue";
 import Back from "@/components/BackButton.vue";
+import MainTitle from "@/components/MainTitle.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -22,7 +24,7 @@ import Back from "@/components/BackButton.vue";
     flex-direction: column;
     align-items: left;
     justify-content: space-around;
-    margin-top: 150px;
+    margin-top: 50px;
   }
   @media screen and (max-width: 1024px) {
     width: 70%;
