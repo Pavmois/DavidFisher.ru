@@ -18,7 +18,6 @@ import MainTitle from "@/components/MainTitle.vue";
 .about {
   margin: auto;
   width: 40%;
-  height: 90vh;
   .about-list {
     display: flex;
     flex-direction: column;
