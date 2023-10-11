@@ -1,5 +1,5 @@
 <template>
-  <p class="credit">
+  <p class="desc">
     Листайте книжку используя кнопки или переворачивая страницы вручную!
   </p>
   <Flipbook class="flipbook" :pages="pages" v-slot="flipbook" ref="flipbook">
@@ -10,7 +10,7 @@
         @click="flipbook.flipLeft"
       ></div>
       <span class="page-num">
-        Страница {{ flipbook.page }} из {{ flipbook.numPages }}
+        {{ flipbook.page }} из {{ flipbook.numPages }}
       </span>
       <div
         class="btn right"
@@ -33,14 +33,6 @@ import img7 from "@/assets/book/7.jpg";
 import img8 from "@/assets/book/8.jpg";
 import img9 from "@/assets/book/9.jpg";
 import img10 from "@/assets/book/10.jpg";
-import img11 from "@/assets/book/11.jpg";
-import img12 from "@/assets/book/12.jpg";
-import img13 from "@/assets/book/13.jpg";
-import img14 from "@/assets/book/14.jpg";
-import img15 from "@/assets/book/15.jpg";
-import img16 from "@/assets/book/16.jpg";
-import img17 from "@/assets/book/17.jpg";
-import img18 from "@/assets/book/18.jpg";
 
 // Массив изображений для модуля Flipbook
 const pages = [
@@ -55,33 +47,26 @@ const pages = [
   img8,
   img9,
   img10,
-  img11,
-  img12,
-  img13,
-  img14,
-  img15,
-  img16,
-  img17,
-  img18,
 ];
 </script>
 
-<style>
-html,
-body {
-  margin: 0;
-  padding: 0;
+<style lang="scss">
+@import "@/styles/variables.scss";
+.desc {
+  font-size: 24px;
+  color: $white-1;
 }
 .flipbook {
   position: relative;
   z-index: 1;
-  margin: 30px auto;
-  width: 80vw;
-  height: 80vh;
+  margin: 0px auto;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column-reverse;
   .btn {
     width: 20px;
     height: 20px;
-    border: 1px solid aqua;
+    background-color: aquamarine;
     border-radius: 50%;
   }
   .action-bar {
@@ -108,24 +93,28 @@ body {
   .action-bar .btn:active {
     filter: none !important;
   }
-
   .action-bar .btn.disabled {
     color: #666;
     pointer-events: none;
   }
-
   .action-bar .page-num {
     font-size: 22px;
     margin-left: 10px;
+    color: $white-1;
   }
-
-  .flipbook .viewport {
-    width: 90vw !important;
-    height: calc(100vh - 50px - 40px) !important;
+  .viewport {
+    width: 90vw;
+    height: calc(100vh - 150px);
+    margin: auto;
   }
-
   .flipbook .bounding-box {
     box-shadow: 0 0 20px #000;
+  }
+  @media (max-width: 600px) {
+    .viewport {
+      height: calc(85vh - 150px);
+      padding: 0;
+    }
   }
 }
 </style>
