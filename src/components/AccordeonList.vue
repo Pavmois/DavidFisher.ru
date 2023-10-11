@@ -4,7 +4,7 @@
     v-for="(question, index) in questions"
     :key="question.title"
   >
-    <button @click="() => handleAccordion(index)">
+    <button @click="handleAccordion(index)">
       {{ question.title }}
     </button>
     <Collapse :when="questions[index].isExpanded" class="collapse">
