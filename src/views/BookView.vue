@@ -5,7 +5,13 @@
     <br />
     или переворачивая страницы вручную!
   </p>
-  <Flipbook class="flipbook" :pages="pages" v-slot="flipbook" ref="flipbook">
+  <Flipbook
+    class="flipbook"
+    :zooms="[1]"
+    :pages="pages"
+    v-slot="flipbook"
+    ref="flipbook"
+  >
     <div class="action-bar">
       <div
         class="btn left"
