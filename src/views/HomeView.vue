@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <MainTitle />
     <div class="router-list">
       <button>
         <router-link to="/about"
@@ -41,10 +40,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import MainTitle from "@/components/MainTitle.vue";
-</script>
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";

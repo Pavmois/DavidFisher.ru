@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <MainTitle />
     <div class="about-list">
       <AccordeonList />
     </div>
@@ -11,7 +10,6 @@
 <script setup>
 import AccordeonList from "@/components/AccordeonList.vue";
 import Back from "@/components/BackButton.vue";
-import MainTitle from "@/components/MainTitle.vue";
 </script>
 
 <style lang="scss" scoped>

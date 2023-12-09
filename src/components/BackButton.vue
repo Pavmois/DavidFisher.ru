@@ -15,6 +15,7 @@
   border-radius: 20px;
   padding: 10px;
   font-size: 1rem;
+  z-index: 999;
   a {
     text-decoration: none;
     color: white;

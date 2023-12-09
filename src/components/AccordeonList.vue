@@ -54,6 +54,12 @@ const questions = reactive([
       "Да, я стримлю всегда кроме <span>вторника</span> и <span>пятницы</span>.<br/><br/> В эти дни у меня выходной, как и любого нормалього рабочего человека. По пятницам у нас проводится особый формат стримов на <a href='https://boosty.to/davidfisher' class='boosty' target='_blank'>Boosty</a>",
     isExpanded: false,
   },
+  {
+    title: "Есть ли у  меня расписание?",
+    answer:
+      "Да, я стримлю всегда кроме <span>вторника</span> и <span>пятницы</span>.<br/><br/> В эти дни у меня выходной, как и любого нормалього рабочего человека. По пятницам у нас проводится особый формат стримов на <a href='https://boosty.to/davidfisher' class='boosty' target='_blank'>Boosty</a>",
+    isExpanded: false,
+  },
 ]);
 
 function handleAccordion(selectedIndex) {

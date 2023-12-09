@@ -1,5 +1,8 @@
 <template>
-  <router-view />
+  <PageContent>
+    <MainTitle />
+    <router-view />
+  </PageContent>
   <video v-if="isDesktop" autoplay muted loop id="myVideo">
     <source src="@/assets/desktop.mp4" type="video/mp4" />
   </video>
@@ -22,6 +25,8 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
+import MainTitle from "@/components/MainTitle.vue";
+import PageContent from "@/containers/PageContent.vue";
 
 let isDesktop = ref(false);
 
