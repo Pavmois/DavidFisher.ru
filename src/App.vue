@@ -56,6 +56,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 body {
   background: linear-gradient(-45deg, #660b0b, #240808, #5c4646, #000000);
@@ -76,9 +81,6 @@ body {
       top: -15%;
     }
   }
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .bubble {

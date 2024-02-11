@@ -5,8 +5,9 @@
 </template>
 <style lang="scss" module>
 .page-content {
-  min-height: 100vh;
+  height: 100dvh;
   padding-left: 80px;
+  overflow-y: scroll;
 
   @media screen and (max-width: 1100px) {
     padding-left: 0;

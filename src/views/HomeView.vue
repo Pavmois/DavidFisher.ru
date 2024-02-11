@@ -44,7 +44,6 @@
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
 .home {
-  height: 100vh;
   width: 90%;
   position: relative;
   display: flex;
@@ -105,6 +104,9 @@
           opacity: 1;
         }
       }
+      &:last-child {
+        margin-bottom: 30px;
+      }
     }
   }
   &-title {
@@ -119,6 +121,11 @@
     color: transparent;
   }
   @media screen and (max-width: 600px) {
+    .router-list {
+      button:hover {
+        transform: scale(1.1);
+      }
+    }
     &-title {
       font-size: 40px;
       margin-top: 30px;

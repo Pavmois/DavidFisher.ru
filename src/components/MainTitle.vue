@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 .main-title {
   position: relative;
-  margin-top: 50px;
+  padding-top: 50px;
   a {
     font-size: 48px;
     font-weight: 700;

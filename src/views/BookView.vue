@@ -135,7 +135,12 @@ const pages = [
   .flipbook .bounding-box {
     box-shadow: 0 0 20px #000;
   }
-  @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
+  .desc {
+    font-size: 18px;
+  }
+  .flipbook {
     .viewport {
       height: calc(85vh - 150px);
       padding: 0;
